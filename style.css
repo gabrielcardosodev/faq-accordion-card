@@ -204,6 +204,7 @@ body {
   }
 
   .img-woman-big {
+    display: block;
     position: absolute;
     width: 46%;
     top: 6rem;
@@ -212,6 +213,7 @@ body {
   }
 
   .img-pattern {
+    display: block;
     width: 58%;
     top: -18.5rem;
     left: -21.5rem;
