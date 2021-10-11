@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  --bolder-color: hsl(238, 29%, 16%);
+  --hover-color: hsl(14, 88%, 65%);
+  --gradient-color-violet: hsl(273, 75%, 66%);
+  --gradient-color-blue: hsl(240, 73%, 65%);
+  --text-color-dark: hsl(237, 12%, 33%);
+  --text-color-light: hsl(240, 6%, 50%);
+  --dividers-color: hsl(240, 5%, 91%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* content */
+.container {
+  width: 80%;
+  max-width: 375px;
+  position: relative;
+}
+
+.img-box {
+  display: none;
+}
+
+.card {
+  width: 100%;
+  position: relative;
+  margin-top: 120px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 50px 80px 8px rgba(30, 40, 55, 0.4);
+}
+
+.card-img {
+  margin-bottom: 10 0px;
+}
+
+.img-woman-big {
+  display: none;
+}
+
+.img-woman {
+  position: absolute;
+  top: -6.7rem;
+  left: 45%;
+  z-index: 1;
+  transform: translate(-50%);
+}
+
+.pattern-desktop {
+  display: none;
+}
+
+.img-pattern {
+  position: absolute;
+  top: -0.05rem;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.content {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 1.5rem auto;
+}
+
+.title {
+  font-weight: 700;
+  color: var(--bolder-color);
+  font-size: 2rem;
+  margin: 95px 0 20px 0;
+  text-align: center;
+}
+
+.list {
+  width: 100%;
+  display: inline-block;
+}
+
+.ask {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: var(--text-color-dark);
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.ask:hover {
+  color: var(--hover-color);
+  transition: ease-in-out 0.4s;
+}
+
+.answer {
+  color: var(--text-color-light);
+  font-size: 0.775rem;
+  line-height: 1rem;
+  margin-right: 2.875rem;
+  margin-bottom: 5px;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: var(--dividers-color);
+  margin: 5px 0;
+}
+
+/* footer */
+.attribution {
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+.attribution a {
+  color: #fff;
+}
+
+.attribution a:hover {
+  color: hsl(228, 45%, 44%);
+}
+
+/* javascript */
+.js-accordion {
+  display: flex;
+  flex-direction: column;
+  justify-self: flex-end;
+}
+
+.js-accordion dd {
+  display: none;
+}
+
+.js-accordion dt::after {
+  content: url(./images/icon-arrow-down.svg);
+  transition: transform 0.4s ease !important;
+}
+
+.js-accordion dt.active::after {
+  transform: rotate(180deg);
+  transition: transform 0.4s ease !important;
+}
+
+.js-accordion dt.active {
+  color: var(--bolder-color);
+  font-weight: 700;
+}
+
+.js-accordion dt.active:hover {
+  color: var(--hover-color);
+  transition: ease-in-out 0.4s;
+}
+
+.js-accordion dd.active {
+  display: block;
+  animation: slideDown 0.5s forwards;
+}
+
+/* animations */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 200px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 900px;
+  }
+
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 4.5rem;
+    margin-top: 0;
+  }
+
+  .img-woman {
+    display: none;
+  }
+
+  .img-woman-big {
+    position: absolute;
+    width: 46%;
+    top: 6rem;
+    left: -3.5rem;
+    z-index: 1;
+  }
+
+  .img-pattern {
+    width: 58%;
+    top: -18.5rem;
+    left: -21.5rem;
+  }
+
+  .img-box {
+    display: inline-block;
+    position: absolute;
+    width: 20%;
+    top: 12.95rem;
+    left: -7.07rem;
+    z-index: 2;
+  }
+
+  .content {
+    width: 50%;
+    padding-left: 3rem;
+    margin: 0;
+  }
+
+  .title {
+    margin-top: 0;
+    text-align: left;
+  }
+}
