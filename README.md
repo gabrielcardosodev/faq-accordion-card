@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Repository](https://github.com/gabrielcardosodev/profile-card-component)
-- Live Site URL: [GitHub Pages](https://gabrielcardosodev.github.io/faq-accordion-card/)
+- Solution URL: https://www.frontendmentor.io/solutions/faq-accordion-card-0oMaJIA6U
+- Live Site URL: https://gabrielcardosodev.github.io/faq-accordion-card/
 
 ### Built with
 
