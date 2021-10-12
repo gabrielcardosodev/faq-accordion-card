@@ -64,15 +64,15 @@ body {
   transform: translate(-50%);
 }
 
-.pattern-desktop {
-  display: none;
-}
-
-.img-pattern {
+.img-pattern-mobile {
   position: absolute;
   top: -0.05rem;
   left: 50%;
   transform: translate(-50%);
+}
+
+.img-pattern-desktop {
+  display: none;
 }
 
 .content {
@@ -134,7 +134,7 @@ body {
 }
 
 .attribution a:hover {
-  color: hsl(228, 45%, 44%);
+  color: var(--hover-color);
 }
 
 /* javascript */
@@ -204,6 +204,7 @@ body {
   }
 
   .img-woman-big {
+    display: block;
     position: absolute;
     width: 46%;
     top: 6rem;
@@ -211,10 +212,17 @@ body {
     z-index: 1;
   }
 
-  .img-pattern {
-    width: 58%;
-    top: -18.5rem;
-    left: -21.5rem;
+  .img-pattern-mobile {
+    display: none;
+  }
+
+  .img-pattern-desktop {
+    position: absolute;
+    display: block;
+    width: 56.5%;
+    top: -18rem;
+    left: -36rem;
+    transform: translate(0%);
   }
 
   .img-box {
